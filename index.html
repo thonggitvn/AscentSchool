@@ -28,9 +28,14 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icomoon@1.0.0/style.min.css">
     <link rel="stylesheet" href="./index.css">
+    
 
     <!-- Tailwin css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     
@@ -179,9 +184,321 @@
       </section>
 
     <!-- Student age -->
-     <section class="studentage container">
+     <section class="studentage container ">
+        <div class="studentage__all  mt-20 bg-pink-100 py-[120px] relative">
+            <div class="stuage__content grid grid-cols-2 items-center gap-20 grid-cols-[40%_auto] ps-[10%] pe-[10%] ">
+                <div class="stuage__content__text">
+                    <p class="text-blue-400 pb-2 font-bold text-sm ">Student knowledge</p>
+                    <h2 class="font-bold text-2xl pb-5 ">Knowledge for
+                        All learn design Excellence for Everyone</h2>
+                    <p class="pb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis hic facere deleniti cum, illo accusamus?
+                        Cumque ad laudantium maiores quasi sequi architecto, unde illum ipsa vitae omnis, itaque ut fugit?</p>
+                    <button
+                        class="bg-red-500 text-sm font-bold text-white pt-2 pb-2 ps-5 pe-5 rounded-full text-center hover:text-red-500 hover:bg-white hover:border-1  hover:border-pink-500 transition-all duration-700">
+                        Learn More
+                    </button>
+                </div>
+                <div class="stuage__content__age grid grid-cols-3 gap-7">
+                    <div class="boxage mt-20 flex flex-col items-end gap-7">
+                        <div class="bg-[#0A6375] rounded-xl w-50 h-50 ">
+                            <h5 class=" text-xl font-bold text-center leading-7 block pt-[35%] text-white ">
+                                <span>1-2</span> <br>
+                                <span>Years</span>
+                            </h5>
+                        </div>
+                        <div class="bg-[#F7941E] rounded-xl w-35 h-35">
+                            <h5 class="text-xl font-bold text-center leading-7 block pt-[30%] text-white">
+                                <span>9-11</span> <br>
+                                <span>Years</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="boxage flex flex-col items-end gap-7">
+                        <div class="bg-blue-500 rounded-xl w-35 h-35">
+                            <h5 class="text-xl font-bold text-center leading-7 block pt-[30%] text-white">
+                                <span>3-5</span> <br>
+                                <span>Years</span>
+                            </h5>
+                        </div>
+                        <div class="bg-pink-600 rounded-xl w-35 h-35">
+                            <h5 class="text-xl font-bold text-center leading-7 block pt-[30%] text-white">
+                                <span>6-8</span> <br>
+                                <span>Years</span>
+                            </h5>
+                        </div>
+                        <div class="bg-green-600 rounded-xl w-35 h-35">
+                            <h5 class="text-xl font-bold text-center leading-7 block pt-[30%] text-white">
+                                <span>16-18</span> <br>
+                                <span>Years</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="boxage mt-42 flex flex-col items-end gap-7">
+                        <div class="bg-[#F7941E] rounded-xl w-35 h-35">
+                            <h5 class="text-xl font-bold text-center leading-7 block pt-[30%] text-white">
+                                <span>9-11</span> <br>
+                                <span>Years</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="stuage_img1 left-5 top-30 absolute z-1 ">
+                <img src="./img/knowledge-lshpe.png" alt="">
+            </div>
+
+            <div class="stuage_img2 top-25 w-48 h-48 right-5 absolute animate-bounce ">
+                <img src="./img/knowledge-animal.png" alt="">
+            </div>
+        </div>
      </section>
+
+    <!-- Clients -->
+     <section class="clients container">
+        <div class="client__content mt-20 flex flex-row justify-between items-center gap-7">
+            <div class="w-100">
+                <p class="text-blue-400 pb-2 font-bold text-sm ">Client Testimonial </p>
+                <h2 class="font-bold text-2xl pb-5 ">Unlocking the Power of Wonderworks Childe</h2>
+            </div>
+
+            <p class="pb-5 w-100  ">Use receiving accounts a number a currencies and get paid like a local Use receivin accounts a number paid the most
+            beautiful think</p>
+        </div>
+        <div class="client__slide py-10 flex flex-row  items-center">
+            <div class="slide__img relative">
+                <img src="./img/bg-img.png" alt="">
+            </div>
+            <div class="slide__content relative ">
+                <div class="slide__box p-10 py-8 -mr-10">
+                        <div class=" border border-[#F2F2F2] p-15 w-120 rounded-xl ml-auto bg-white shadow-xl -translate-x-30
+                        animate-pulse ">
+                            <div class="flex justify-between items-center relative z-10 pb-5">
+                                <div class="flex items-center gap-5">
+                                    <img src="./img/user-1.png" alt="bg-img">
+                                    <div>
+                                        <h5 class="md:text-2xl text-xl font-semibold md:leading-[140%]">Shakib Al Hasan</h5>
+                                        <p>Marketing Manager</p>
+                                    </div>
+                                </div>
+                                <div class="absolute right-0 z-[-1]">
+                                    <img src="./img/quotation.png" alt="quotation" class=" w-9">
+                                </div>
+                            </div>
+                            <p>Their product exceeded his my routi expectations. The the quality and attention to detail a the a most
+                                outstanding and it has become an essential most a education the man who can do </p>
+                            <ul class="flex items-center gap-1 lg:pt-10 pt-5">
+                                <li><i class="fa-solid fa-star text-primary-foreground text-xl" aria-hidden="true"></i></li>
+                                <li><i class="fa-solid fa-star text-primary-foreground text-xl" aria-hidden="true"></i></li>
+                                <li><i class="fa-solid fa-star text-primary-foreground text-xl" aria-hidden="true"></i></li>
+                                <li><i class="fa-solid fa-star text-primary-foreground text-xl" aria-hidden="true"></i></li>
+                                <li><i class="fa-regular fa-star text-muted-foreground opacity-30 text-xl" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+                </div>                
+            </div>
+        </div>
+     </section>
+
+    <!-- blogs -->
+     <section class="blog container ">
+        <div class="blog__all  mt-20 bg-pink-100 py-[120px]">
+            <div class="blog_title">
+                <p class="text-blue-400 pb-2 font-bold text-sm ">Latest Blog And News </p>
+                <h2 class="font-bold text-2xl pb-5 ">Wonderworks Child Development Center <br> Discovery Kids Preschool</h2>
+            </div>
+            <div class="blog_grid grid grid-cols-2 gap-7">
+                <div class="blog__grid__small ps-2">
+                    <div class="flex flex-col gap-7.5">
+                        <div class="rounded-xl p-2.5 flex flex-row items-center gap-5 border border-1 border-transparent bg-white shadow-md ">
+                            <div class="w-[210px]">
+                                <img src="./img/blog-1.png" alt="blog-img-1" class="rounded-md">
+                            </div>
+                            <div>
+                                <div class=" pb-3 flex items-center gap-5">
+                                    <p><i class="fa-regular fa-calendar-days  mr-1 inline-block"
+                                            aria-hidden="true"></i><small>October 19, 2023</small></p>
+                                    <p><i class="fa-regular fa-user  mr-1 inline-block"
+                                            aria-hidden="true"></i><small>By admin</small></p>
+                                </div>
+                                <h3 class="w-[370px]"><a href=""
+                                        class="text-xl text-black font-bold  hover:text-gray-500 transition-all duration-500">Empowering
+                                        Children Through Education the a Igniting</a></h3>
+                                <a href="" class="inline-flex items-center gap-3 mt-6 ">
+                                    <span class=" font-bold hover:text-gray-500 transition-all duration-500">Read More</span>
+                                    <span
+                                        class=" transition-all duration-500">
+                                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rounded-xl p-2.5 flex flex-row items-center gap-5 border border-1 border-transparent bg-white shadow-md ">
+                            <div class="w-[210px]">
+                                <img src="./img/blog-2.png" alt="blog-img-1" class="rounded-md">
+                            </div>
+                            <div>
+                                <div class=" pb-3 flex items-center gap-5">
+                                    <p><i class="fa-regular fa-calendar-days  mr-1 inline-block"
+                                            aria-hidden="true"></i><small>October 19, 2023</small></p>
+                                    <p><i class="fa-regular fa-user  mr-1 inline-block"
+                                            aria-hidden="true"></i><small>By admin</small></p>
+                                </div>
+                                <h3 class="w-[370px]"><a href=""
+                                        class="text-xl text-black font-bold  hover:text-gray-500 transition-all duration-500">Empowering
+                                        Children Through Education the a Igniting</a></h3>
+                                <a href="" class="inline-flex items-center gap-3 mt-6 ">
+                                    <span class=" font-bold hover:text-gray-500 transition-all duration-500">Read More</span>
+                                    <span
+                                        class=" transition-all duration-500">
+                                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                </a>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="blog__grid__large pe-2">
+                    <div class="bg-white rounded-xl flex flex-col items-start gap-5 shadow-xl h-full ">
+                        <div class="w-full">
+                            <img src="./img/blog-3.png">
+                        </div>
+                        <div class="px-10 pb-10">
+                            <div class="pb-5  flex items-center gap-5">
+                                <p><i class="fa-regular fa-calendar-days  mr-1 inline-block"
+                                        aria-hidden="true"></i><small>October 19, 2023</small></p>
+                                <p><i class="fa-regular fa-user  mr-1 inline-block"
+                                        aria-hidden="true"></i><small>By admin</small></p>
+                            </div>
+                            <h3><a href=""
+                                    class=" text-xl font-semibold hover:text-gray-500 transition-all duration-500">Empowering
+                                    Children Through Education the a Igniting</a></h3>
+                            <a href="" class="inline-flex items-center gap-2.5 lg:mt-6 mt-4 ">
+                                <span class="transition-all duration-500 font-bold  hover:text-gray-500 ">Read More</span>
+                                <span class="transition-all duration-500  hover:text-gray-500"> <i
+                                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    
+     <!-- Conected -->
+      <section class="conected container bg-linear-to-b from-white to-[#E9FFB6]">
+        <div class="flex flex-row items-center justify-between gap-5 mt-20 bg-[url('./img/bg-imgtree.png')] bg-no-repeat bg-bottom bg-contain">
+            <div class="max-w-[598px] w-full order-1 ">
+                <div class="bg-[url('./img/egg-shap.png')] bg-no-repeat bg-bottom bg-contain animate-bounce">
+                    <img src="./img/student.png"  class="mx-auto">
+                </div>
+            </div>
+            <div class="order-1">
+                <p class=" text-l font-bold"
+                    ">Get Connected</p>
+                <h2 class="font-bold text-3xl">Education That Sparks Imaginat <br> Nurturing Curiosity Inspire</h2>
+                <div class="relative mt-5">
+                    <input type="text" placeholder="Enter Your Email"
+                        class="rounded-md border border-black py-7 max-h-20 w-full outline-none bg-white">
+                    <button
+                        class="bg-orange-500 rounded-xl pt-5 pb-5 ps-10 pe-10 absolute right-2 top-1/2 -translate-y-1/2 text-bold text-white "><span>Submit</span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+      </section>
+
+    <!-- footer -->
+    <footer class="footer__content container pt-[70px] relative">
+        <div class="grid lg:grid-cols-[370px_auto_auto] sm:grid-cols-2 grid-cols-1 justify-between gap-7.5">
+                <div class="foo_col1">
+                    <a href="" class="flex items-center gap-1">
+                        <img src="./img/logo.png" alt="">
+                        <span class="font-bold text-3xl ">Ascent</span>
+                    </a>
+                    <p class="pt-4">Yes, there are many notable ma corporate the a od businesses Informati worldwide</p>
+                    <ul class="flex items-center gap-5 pt-7.5">
+                        <li><a href=""
+                                class="rounded-md w-9 h-9 flex items-center justify-center bg-gray-300 hover:text-white hover:bg-green-600 transition-all duration-500"><i
+                                    class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href=""
+                                class="rounded-md w-9 h-9 flex items-center justify-center bg-gray-300 hover:text-white hover:bg-green-600 transition-all duration-500"><i
+                                    class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href=""
+                                class="rounded-md w-9 h-9 flex items-center justify-center bg-gray-300 hover:text-white hover:bg-green-600 transition-all duration-500"><i
+                                    class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href=""
+                                class="rounded-md w-9 h-9 flex items-center justify-center bg-gray-300 hover:text-white hover:bg-green-600 transition-all duration-500"><i
+                                    class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+        
+                <div class="foo__col2">
+                    <h3 class="text-2xl font-semibold">Pages</h3>
+                    <ul class="flex flex-col gap-[15px] pt-5">
+                        <li><a href=""
+                                class="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-orange-500 font-semibold">About
+                                Us</a></li>
+                        <li><a href=""
+                                class="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-orange-500 font-semibold">Latest
+                                Service</a></li>
+                        <li><a href=""
+                                class="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-orange-500 font-semibold">Latest
+                                Blog And News</a></li>
+                        <li><a href=""
+                                class="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-orange-500 font-semibold">FAQ</a>
+                        </li>
+                        <li><a href=""
+                                class="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-orange-500 font-semibold">Our
+                                Creative Team Member</a></li>
+                    </ul>
+                </div>
+              
+                <div class="foo-col3">
+                    <h3 class="text-2xl font-semibold">Contact</h3>
+                    <ul class="flex flex-col gap-[15px] pt-5">
+                        <li>
+                            <p class="text-[#686868] flex items-center gap-4">
+                                <span
+                                    class="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><i
+                                        class="fa-solid fa-location-dot text-green-500" aria-hidden="true"></i></span> <span
+                                    class="max-w-[168px]">1179 KFC Road, Lisbon, Portugal</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text-[#686868] flex items-center gap-4">
+                                <span
+                                    class="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><i
+                                        class="fa-solid fa-envelope  text-green-500" aria-hidden="true"></i></span> <a
+                                    href="">Sakib23@gmail.com</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text-[#686868] flex items-center gap-4">
+                                <span
+                                    class="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><i
+                                        class="fa-solid fa-phone  text-green-500" aria-hidden="true"></i></span> <a href="">012547892354</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="pt-[75px] ">
+                <div class="flex  flex-row justify-between items-center pt-7 pb-8 border-t border-t-white border-opacity-20 text-black">
+                    <p class="">© <a href="">Yoursitename</a> 2024 | All Rights Reserved</p>
+                    <ul class="flex items-center gap-7 font-semibold">
+                        <li><a href="">Trams &amp; Condition</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+        </div>
+        
+        <div id="scroll-up"
+            class="absolute bottom-20 xl:left-[90%] left-1/2 -translate-x-1/2 w-12.5 h-12.5 rounded-full bg-orange-600 flex justify-center items-center border-l border-white cursor-pointer">
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </div>
+    </footer>
 </body>
 </html>
 
