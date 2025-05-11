@@ -14,6 +14,171 @@ body {
   padding-left: 5px;
 }
 
+/* header */
+.bg-destructive {
+  background-color: rgb(248, 32, 111);
+}
+.text-cream-foreground {
+  color: aliceblue;
+}
+.bg-secondary {
+  background-color: rgb(10, 239, 182);
+  font-weight: bold;
+}
+
+.bg-warm {
+  background-color: #fff0e5;
+}
+.btn {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.5s ease-in-out;
+  padding: 20px 30px;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 60px;
+  font-weight: bold;
+}
+.btn:hover::after {
+  width: 100%;
+}
+.btn:hover {
+  color: #fff;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #1cbbb4;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 6px;
+}
+
+.bg-primary {
+  background-color: rgb(245, 120, 31);
+}
+.bg-destructive {
+  background-color: #ed145b;
+}
+.bg-green {
+  background-color: #73be48;
+}
+.bg-secondery {
+  background-color: #1cbbb4;
+}
+.border-primary {
+  border-color: rgb(245, 120, 31);
+}
+.bg-background {
+  background-color: #fff;
+}
+.text-secondary-foreground {
+  color: #1cbbb4;
+}
+.border-secondary {
+  border-color: #1cbbb4;
+}
+.text-destructive-foreground {
+  color: #ed145b;
+}
+.text-primary-foreground {
+  color: #f7941e;
+}
+.font-bubblegum-sans {
+  font-family: Bubblegum Sans;
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-up-down {
+  animation: upDown 2s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInUp {
+  animation: fadeInUp 2s ease-out both; /* Kéo dài hơn cho mượt */
+}
+
+.text-green-foreground {
+  color: #73be48;
+}
+
+.hover\:shadow-3xl:hover {
+  box-shadow: 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
+}
+.group:hover .group-hover-text-cream {
+  color: #fff;
+}
+
+.group:hover .group-hover-bg-green {
+  background-color: #73be48;
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+.slick-slide {
+  transition: all 0.3s ease;
+  opacity: 0.4; /* Các slide không ở trung tâm sẽ mờ */
+}
+.slick-slide.slick-center {
+  opacity: 1; /* Slide ở trung tâm sẽ rõ */
+}
+
+.animate-left-right {
+  animation: upDown 1.5s ease-in-out infinite;
+}
+
+.hover\:text-cream-foreground:hover {
+  color: #fff;
+}
+.hover\:bg-primary:hover {
+  background-color: #f7941e;
+}
+.text-cream-foreground {
+  color: #fff;
+}
+.border-secondary {
+  border-color: #1cbbb4;
+}
+.custom-dot.active {
+  background-color: #1cbbb4;
+  height: 5px;
+  width: 15px;
+  border-radius: 10px;
+}
 .somefaq__box {
   margin-bottom: 25px;
 }
