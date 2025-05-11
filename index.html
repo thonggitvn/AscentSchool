@@ -6,6 +6,7 @@
     <title>AscentSchool</title>
 
     <!-- font roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -20,11 +21,15 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
-    
+    <!-- Thêm Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <!-- animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-
+    <!-- Tải Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
     <!-- Style CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icomoon@1.0.0/style.min.css">
     <link rel="stylesheet" href="./index.css">
@@ -32,17 +37,1233 @@
 
     <!-- Tailwin css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
+    <!-- header -->
+    <header>
+        <div class="header-container">
+            <!-- top header -->
+            <div id="top-header" class="bg-destructive sm:block hidden">
+                <div class="container">
+                    <div class="flex lg:flex-row flex-col justify-between items-center gap-2 py-[13px]">
+                        <div class="">
+                            <ul class="flex gap-7.5">
+                                <li>
+                                    <a href="" class="text-cream-foreground flex items-start gap-4">
+                                        <span>
+                                            <i class="fa-solid fa-phone"></i>
+                                        </span>
+                                        <span>(629) 555-0129</span>
+                                    </a>
+                                </li>
+                                <li class="text-cream-foreground flex items-start gap-4">
+                                    <span>
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <span>info@example.com</span>
+                                </li>
+                                <li>
+                                    <p class="text-cream-foreground flex items-start gap-4">\
+                                        <span>
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </span>
+                                        <span>6391 Elgin St. Celina, 10299</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex items-center gap-[14px]">
+                                <li>
+                                    <a href=""
+                                        class="rounded-md w-6 h-6 flex text-xs items-center justify-center border border-white border-opacity-20 text-cream-foreground hover:bg-primary transition-all duration-500">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="rounded-md w-6 h-6 flex text-xs items-center justify-center border border-white border-opacity-20 text-cream-foreground hover:bg-primary transition-all duration-500">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="rounded-md w-6 h-6 flex text-xs items-center justify-center border border-white border-opacity-20 text-cream-foreground hover:bg-primary transition-all duration-500">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="rounded-md w-6 h-6 flex text-xs items-center justify-center border border-white border-opacity-20 text-cream-foreground hover:bg-primary transition-all duration-500">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- top end -->
     
+            <!-- bottom header -->
+            <div class="">
+                <div class="container py-5 ">
+                    <div class="flex justify-between items-center ">
+                        <div class="">
+                            <a href="" class="flex items-center gap-1">
+                                <img src="https://ascent-tailwind.vercel.app/assets/images/logo.png" alt="">
+                                <span class="font-bold text-3xl ">Ascent</span>
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <nav class="xl:block hidden">
+                                <ul class="flex items-center gap-[25px]">
+                                    <li class="leading-[164%] relative py-5 group">
+                                        <a href=""
+                                            class="hover:text-orange-500 font-semibold text-lg font-jost transition-all duration-500 py-5">
+                                            Home
+                                            <span><i class="fa-solid fa-angle-down"></i></span>
+                                        </a>
+                                        <ul
+                                            class="absolute top-full z-10 bg-background shadow-sm min-w-56 transition-all duration-500 opacity-0 invisible translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="leading-[164%] relative group">
+                                        <a href=""
+                                            class="hover:text-orange-500 font-semibold text-lg font-jost transition-all duration-500 py-5">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li class="leading-[164%] relative py-5 group">
+                                        <a href=""
+                                            class="hover:text-orange-500 font-semibold text-lg font-jost transition-all duration-500 py-5">
+                                            Services
+                                            <span><i class="fa-solid fa-angle-down"></i></span>
+                                        </a>
+                                        <ul
+                                            class="absolute top-full z-10 bg-background shadow-sm min-w-56 transition-all duration-500 opacity-0 invisible translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="leading-[164%] relative py-5 group">
+                                        <a href=""
+                                            class="hover:text-orange-500 font-semibold text-lg font-jost transition-all duration-500 py-5">
+                                            Blog
+                                            <span><i class="fa-solid fa-angle-down"></i></span>
+                                        </a>
+                                        <ul
+                                            class="absolute top-full z-10 bg-background shadow-sm min-w-56 transition-all duration-500 opacity-0 invisible translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="leading-[164%] relative py-5 group">
+                                        <a href=""
+                                            class="hover:text-orange-500 font-semibold text-lg font-jost transition-all duration-500 py-5">
+                                            Page
+                                            <span><i class="fa-solid fa-angle-down"></i></span>
+                                        </a>
+                                        <ul
+                                            class="absolute top-full z-10 bg-background shadow-sm min-w-56 transition-all duration-500 opacity-0 invisible translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                            <li
+                                                class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">
+                                                <a href=""
+                                                    class=" font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Home-1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="leading-[164%] relative group">
+                                        <a href=""
+                                            class="hover:text-orange-500 font-semibold text-lg font-jost transition-all duration-500 py-5">
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="flex items-center gap-6 ">
+                            <div class="ml-16 cursor-pointer search-btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <a href="#" class="bg-secondary text-cream-foreground rounded-md sm:flex hidden items-center gap-2.5 btn">
+                                Get A Quote
+                                <span><i class="fa-solid fa-arrow-right"></i></span>
+                            </a>
+                            <button id="menu-toggle" class="xl:hidden block text-2xl text-black ml-4">
+                                <i class="fa-solid fa-bars"></i>   
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="xl:hidden hidden bg-background shadow-lg">
+            <nav class="bg-orange-100 border-l-2 border-l-primary w-full max-w-md min-h-screen h-full overflow-y-auto p-7 shadow-md fixed top-0 z-50 transition-all duration-500 offcanva right-0">
+                <div class="container mx-auto px-4 py-6">
+                    <div class="flex justify-between items-center">
+                        <a href="" class="flex items-center gap-1">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/logo.png" alt="Ascent Logo" class="h-12">
+                            <span class="font-bold text-3xl ">Ascent</span>
+                        </a>
+                        <div
+                            class="bg-primary w-10 h-10 text-cream-foreground flex items-center justify-center rounded-[4px] left-4 offcanvaClose cursor-pointer">
+                            <i class="fa-solid fa-xmark"></i>  
+                        </div>
+                        </div>
+                    <nav class="nav-menu">
+                        <a href="#" class="text-gray-700 hover:text-orange-500 py-2 border-b flex justify-between items-center">
+                            <span>Home</span>
+                            <span class="text-gray-400">+</span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 py-2 border-b flex justify-between items-center">
+                            <span>About Us</span>
+                            <span class="text-gray-400">+</span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 py-2 border-b flex justify-between items-center">
+                            <span>Services</span>
+                            <span class="text-gray-400">+</span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 py-2 border-b flex justify-between items-center">
+                            <span>Blog</span>
+                            <span class="text-gray-400">+</span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 py-2 border-b flex justify-between items-center">
+                            <span>Page</span>
+                            <span class="text-gray-400">+</span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 py-2 border-b flex justify-between items-center">
+                            <span>Contact Us</span>
+                            <span class="text-gray-400">+</span>
+                        </a>
+                    </nav>
+                    <div class="mt-6">
+                        <h3 class="text-orange-500 font-bold">CONTACT INFO</h3>
+                        <p class="text-gray-700 mt-2">
+                            <span class="text-orange-500"><i class="fas fa-phone"></i></span> (629) 555-0129<br>
+                            <span class="text-orange-500"><i class="fas fa-envelope"></i></span> info@example.com<br>
+                            <span class="text-orange-500"><i class="fas fa-map-marker-alt"></i></span> 6391 Elgin St. Celina, 10299
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 w-full">
+                            Get A Quote →
+                        </button>
+                    </div>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="text-gray-700 hover:text-orange-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500"><i class="fab fa-pinterest-p"></i></a>      
+                    </div>
+            </nav>
+        </div>
+            <!-- bottom end -->
+    </div>
+    </header>
+    <!-- end header -->
+    <!-- banner --> 
+    <section class="bg-warm pt-[78px] lg:mb-15 mb-10 relative">
+        <div class="container relative">
+            <div class="flex flex-col items-center text-center relative z-10">
+                <h1 class="font-normal xl:text-[70px] lg:text-6xl md:text-5xl text-4xl xl:leading-[128%] lg:leading-[125%] md:leading-[120%] max-w-[776px]">
+                    <span class="relative">
+                        Exploring Minds
+                        <span class="absolute -left-6 top-1 text-3xl">
+                            <i class="fa-brands fa-pagelines"></i>
+                        </span>
+                    </span>
+                    <span class="font-bold">Elementary</span>
+                    <span class="font-bold text-destructive-foreground">School</span>
+                </h1>
+                <div class="flex absolute right-[87px] top-14 animate-skw">
+                    <img src="https://ascent-tailwind.vercel.app/assets/images/shapes/shap.png" alt="" class="w-7.5 h-12.5 relative top-9">
+                    <img src="https://ascent-tailwind.vercel.app/assets/images/shapes/shap.png" alt="" class="w-7.5 h-12.5 relative top-9">
+                    <img src="https://ascent-tailwind.vercel.app/assets/images/shapes/shap.png" alt="" class="w-7.5 h-12.5 relative top-9">
+                </div>
+                <p class="pt-5 max-w-[431px]">Starting a corporate business typically involves several steps, such as
+                develo a business</p>
+                <a href="" class="bg-secondary text-cream-foreground rounded-md sm:flex hidden items-center gap-2.5 btn">
+                    Learn More
+                </a>
+            </div>
+            <div class="absolute left-2.5 lg:top-0 top-10 lg:max-w-full max-w-[200px] sm:block hidden animate-up-down">
+                <img src="https://ascent-tailwind.vercel.app/assets/images/banner/boy_img_1.png" alt="">
+                <span class="absolute -left-2.5 top-[9px] border-2 border-primary rounded-[125px] w-full h-full"></span>
+            </div>
+            <div class="absolute right-0 bottom-0 pb-[71px] lg:block hidden animate-up-down">
+                <img src="https://ascent-tailwind.vercel.app/assets/images/banner/boy_img_2.png" alt="">
+                <span class="absolute -left-2.5 top-[9px] border-2 border-secondary rounded-[125px] max-h-[369px] w-full h-full"></span>
+            </div>
+            <div class="">
+                <img src="https://ascent-tailwind.vercel.app/assets/images/banner/painting.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- end banner -->
+    <!-- CONTER STRAT -->
+    <section class="lg:pt-15 pt-10 lg:pb-15 pb-10"> 
+        <div class="container">
+            <div class="grid xl:grid-cols-2 lg:grid-cols-[40%_auto] grid-cols-1 gap-7.5">
+                <!-- left -->
+                <div class="lg:max-w-[600px]">
+                    <p class="text-primary-foreground font-bubblegum-sans text-[19px] fadeInUp">Number Talks</p>
+                    <h2 class="font-bold text-2xl fadeInUp">
+                        Invest in education invest in the future
+                    </h2>
+                    <p class="text-slate-500 font-bold fadeInUp">Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin
+                    metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum
+                    </p>
+                    <button class="border border-gray-200 rounded-md lg:mt-10 mt-7 btn">
+                        Get a quote
+                    </button>
+                </div>
+                
+
+                <!-- right -->
+                <div class="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
+                    <div class="rounded-lg border border-gray-200 px-[18px] lg:py-7.5 py-5 flex items-center gap-5 fadeInUp">
+                        <div class="rounded-full bg-primary lg:w-20 lg:h-20 w-16 h-16 flex items-center justify-center">
+                            <img src="https://img.icons8.com/external-others-pike-picture/100/external-Kindergarten-kindergarten-others-pike-picture-2.png"
+                                class="w-20 h-20 filter brightness-0 invert" />                          
+                        </div>
+                        <div class="">
+                            <h4 class="font-bold lg:text-[32px] md:text-[28px] text-2xl">20k</h4>
+                            <p class="text-gray-500 font-bold">Running Students</p>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border border-gray-200 px-[18px] lg:py-7.5 py-5 flex items-center gap-5 fadeInUp">
+                        <div class="rounded-full bg-destructive lg:w-20 lg:h-20 w-16 h-16 flex items-center justify-center">
+                            <img src="https://img.icons8.com/external-others-pike-picture/100/external-Kindergarten-kindergarten-others-pike-picture-2.png"
+                                class="w-20 h-20 filter brightness-0 invert" />
+                        </div>
+                        <div class="">
+                            <h4 class="font-bold lg:text-[32px] md:text-[28px] text-2xl">20k</h4>
+                            <p class="text-gray-500 font-bold">Running Students</p>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border border-gray-200 px-[18px] lg:py-7.5 py-5 flex items-center gap-5 fadeInUp">
+                        <div class="rounded-full bg-green lg:w-20 lg:h-20 w-16 h-16 flex items-center justify-center">
+                            <img src="https://img.icons8.com/external-others-pike-picture/100/external-Kindergarten-kindergarten-others-pike-picture-2.png"
+                                class="w-20 h-20 filter brightness-0 invert" />
+                        </div>
+                        <div class="">
+                            <h4 class="font-bold lg:text-[32px] md:text-[28px] text-2xl">20k</h4>
+                            <p class="text-gray-500 font-bold">Running Students</p>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border border-gray-200 px-[18px] lg:py-7.5 py-5 flex items-center gap-5 fadeInUp">
+                        <div class="rounded-full bg-secondery lg:w-20 lg:h-20 w-16 h-16 flex items-center justify-center">
+                            <img src="https://img.icons8.com/external-others-pike-picture/100/external-Kindergarten-kindergarten-others-pike-picture-2.png"
+                                class="w-20 h-20 filter brightness-0 invert" />
+                        </div>
+                        <div class="">
+                            <h4 class="font-bold lg:text-[32px] md:text-[28px] text-2xl">20k</h4>
+                            <p class="text-gray-500 font-bold">Running Students</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- conuter END -->
+    <!-- ABOUT -->
+     <section class="lg:pt-15 pt-10 lg:pb-15 pb-10">
+        <div class="container">
+            <div class="grid lg:grid-cols-[60%_40%] grid-cols-1 items-center">
+                <!-- lèft -->
+                 <div class="relative">
+                    <div class="flex sm:flex-row flex-col sm:items-end gap-6">
+                        <div class="fadeInUp">
+                            <div class="">
+                                <img src="https://ascent-tailwind.vercel.app/assets/images/about/shap-1.png" alt="">
+                            </div>
+                            <div class="ml-9">
+                                <img src="https://ascent-tailwind.vercel.app/assets/images/about/about-1.png" alt="" class="w-full">
+                            </div>
+                        </div>
+                        <div class="flex sm:flex-col gap-8">
+                            <div class="bg-warm max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center">
+                                <img src="https://ascent-tailwind.vercel.app/assets/images/about/icreement.png" alt="">
+                                <h6 class="text-xl font-bold">Academy</h6>
+                                <p>Learning Ladder School</p>
+                            </div>
+                            <div
+                                class="bg-background max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
+                                <h6 class="text-[32px] font-bold text-secondary-foreground">10+</h6>
+                                <p>Learning Ladder School</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <!-- left end -->
+                <!-- right -->
+                 <div class="lg:max-w-[439px] pt-7.5">
+                    <p class="text-secondary-foreground font-bubblegum-sans text-[19px] fadeInUp">About Us</p>
+                    <h2 class="font-bold text-4xl fadeInUp ">Unlocking Potential, One Child at a just Time in school</h2>
+                    <p class="text-slate-500 font-bold fadeInUp ">Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin
+                    metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum
+                    </p>
+                    <a href="" class="border border-gray-200 rounded-md lg:mt-10 mt-7 btn">
+                        Get a quote
+                    </a>
+                 </div>
+                <!-- right end -->
+            </div>
+        </div>
+     </section>  
+    <!-- ABOUT END  -->
+    <!--PROGRAM STRAT  -->
+    <section class="lg:pt-15 pt-10 lg:pb-15 pb-10 relative">
+        <div class="container">
+            <div class="text-center flex flex-col items-center">
+                <p class="text-green-foreground font-bubblegum-sans text-[19px] fadeInUp">
+                    Educational Programs
+                </p>
+                <h2 class="font-bold lg:text-[32px] md:text-[28px] text-2xl fadeInUp">
+                    Strong Foundation for Success For Nurturing Curiosityl
+                </h2>
+            </div>
+            <div class="lg:pl-11 pt-10 lg:pt-15">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5 lg:gap-x-[74px] gap-y-7.5">
+                    <div class="relative group bg-background 
+                        border-2 border-[#F2F2F2] rounded-[10px] p-4 lg:p-10 
+                        transition hover:shadow-3xl hover:border-transparent">
+                            <!-- Icon box -->
+                        <div
+                            class="w-[70px] md:max-w-[88px] h-[70px] 
+                            md:max-h-[88px] flex items-center 
+                            justify-center rounded-[10px] 
+                            border border-[#F2F2F2] bg-background 
+                            p-2.5 sm:p-[14px] absolute lg:-left-11 top-1/2 
+                            lg:-translate-y-1/2 text-green-foreground transition 
+                            group-hover-bg-green group-hover-text-cream">
+                            <i class="fa-solid fa-car-side text-[40px] md:text-5xl"></i>
+                        </div>
+            
+                        <!-- Content -->
+                        <div class="mt-4 lg:mt-0 lg:pl-11">
+                            <h4 class="text-xl lg:text-2xl font-semibold transition group-hover:text-green-foreground">
+                                <a href="#">Online Class</a>
+                            </h4>
+                            <p class="mt-3 lg:mt-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis pretium facilisis.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2.5 mt-4 lg:mt-7.5 group">
+                                <span class="transition group-hover:text-green-foreground">Read More</span>
+                                <span class="transition group-hover:text-green-foreground group-hover:ml-1">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative group bg-background 
+                                        border-2 border-[#F2F2F2] rounded-[10px] p-4 lg:p-10 
+                                        transition hover:shadow-3xl hover:border-transparent">
+                        <!-- Icon box -->
+                        <div class="w-[70px] md:max-w-[88px] h-[70px] 
+                                            md:max-h-[88px] flex items-center 
+                                            justify-center rounded-[10px] 
+                                            border border-[#F2F2F2] bg-background 
+                                            p-2.5 sm:p-[14px] absolute lg:-left-11 top-1/2 
+                                            lg:-translate-y-1/2 text-green-foreground transition 
+                                            group-hover-bg-green group-hover-text-cream">
+                            <i class="fa-solid fa-car-side text-[40px] md:text-5xl"></i>
+                        </div>
+                    
+                        <!-- Content -->
+                        <div class="mt-4 lg:mt-0 lg:pl-11">
+                            <h4 class="text-xl lg:text-2xl font-semibold transition group-hover:text-green-foreground">
+                                <a href="#">Online Class</a>
+                            </h4>
+                            <p class="mt-3 lg:mt-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis pretium facilisis.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2.5 mt-4 lg:mt-7.5 group">
+                                <span class="transition group-hover:text-green-foreground">Read More</span>
+                                <span class="transition group-hover:text-green-foreground group-hover:ml-1">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative group bg-background 
+                                        border-2 border-[#F2F2F2] rounded-[10px] p-4 lg:p-10 
+                                        transition hover:shadow-3xl hover:border-transparent">
+                        <!-- Icon box -->
+                        <div class="w-[70px] md:max-w-[88px] h-[70px] 
+                                            md:max-h-[88px] flex items-center 
+                                            justify-center rounded-[10px] 
+                                            border border-[#F2F2F2] bg-background 
+                                            p-2.5 sm:p-[14px] absolute lg:-left-11 top-1/2 
+                                            lg:-translate-y-1/2 text-green-foreground transition 
+                                            group-hover-bg-green group-hover-text-cream">
+                            <i class="fa-solid fa-car-side text-[40px] md:text-5xl"></i>
+                        </div>
+                    
+                        <!-- Content -->
+                        <div class="mt-4 lg:mt-0 lg:pl-11">
+                            <h4 class="text-xl lg:text-2xl font-semibold transition group-hover:text-green-foreground">
+                                <a href="#">Online Class</a>
+                            </h4>
+                            <p class="mt-3 lg:mt-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis pretium facilisis.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2.5 mt-4 lg:mt-7.5 group">
+                                <span class="transition group-hover:text-green-foreground">Read More</span>
+                                <span class="transition group-hover:text-green-foreground group-hover:ml-1">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative group bg-background 
+                                        border-2 border-[#F2F2F2] rounded-[10px] p-4 lg:p-10 
+                                        transition hover:shadow-3xl hover:border-transparent">
+                        <!-- Icon box -->
+                        <div class="w-[70px] md:max-w-[88px] h-[70px] 
+                                            md:max-h-[88px] flex items-center 
+                                            justify-center rounded-[10px] 
+                                            border border-[#F2F2F2] bg-background 
+                                            p-2.5 sm:p-[14px] absolute lg:-left-11 top-1/2 
+                                            lg:-translate-y-1/2 text-green-foreground transition 
+                                            group-hover-bg-green group-hover-text-cream">
+                            <i class="fa-solid fa-car-side text-[40px] md:text-5xl"></i>
+                        </div>
+                    
+                        <!-- Content -->
+                        <div class="mt-4 lg:mt-0 lg:pl-11">
+                            <h4 class="text-xl lg:text-2xl font-semibold transition group-hover:text-green-foreground">
+                                <a href="#">Online Class</a>
+                            </h4>
+                            <p class="mt-3 lg:mt-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis pretium facilisis.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2.5 mt-4 lg:mt-7.5 group">
+                                <span class="transition group-hover:text-green-foreground">Read More</span>
+                                <span class="transition group-hover:text-green-foreground group-hover:ml-1">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>              
+        </div>
+        <div class="absolute top-15 right-11 z-[-1] animate-left-right hidden md:block">
+            <img src="https://ascent-tailwind.vercel.app/assets/images/shapes/pencil-rocket.png" alt="" class="w-full h-auto">
+        </div>
+    </section>
+    <!-- END -->
+    <!-- portfolio start -->
+     <section class="lg:pt-15 lg:pb-15 pt-10 pb-10 portfolio">
+        <div class="container">
+            <div class="text-center flex flex-col items-center ">
+                <p class="text-green-foreground font-bubblegum-sans text-[19px] fadeInUp">Latest Portfolio</p>
+                <h2 class="font-bold lg:text-[32px] md:text-[28px] text-2xl fadeInUp">Exploring Minds Elementary School Education the only school</h2>
+            </div>
+            <div class="pt-10">
+                <ul class="flex items-center justify-center flex-wrap md:gap-7.5 gap-5 ">
+                    <li data-target="education"class="px-5 py-2.5 text-xl font-bold border border-[#F2F2F2] rounded-[10px]
+                                                font-jost cursor-pointer hover:bg-primary 
+                                                hover:text-cream-foreground transition-all duration-500 target-tab active-tab">
+                        Education
+                    </li>
+                    <li data-target="school"class="px-5 py-2.5 text-xl font-bold border border-[#F2F2F2] rounded-[10px]
+                                                    font-jost cursor-pointer hover:bg-primary 
+                                                    hover:text-cream-foreground transition-all duration-500 target-tab">
+                        School
+                    </li>
+                    <li data-target="learn" class="px-5 py-2.5 text-xl font-bold border border-[#F2F2F2] rounded-[10px]
+                                                    font-jost cursor-pointer hover:bg-primary 
+                                                    hover:text-cream-foreground transition-all duration-500 target-tab">
+                        Learn
+                    </li>
+                    <li data-target="Child" class="px-5 py-2.5 text-xl font-bold border border-[#F2F2F2] rounded-[10px]
+                                                    font-jost cursor-pointer hover:bg-primary 
+                                                    hover:text-cream-foreground transition-all duration-500 target-tab">
+                        Child
+                    </li>
+                    <li data-target="Coaching" class="px-5 py-2.5 text-xl font-bold border border-[#F2F2F2] rounded-[10px]
+                                                    font-jost cursor-pointer hover:bg-primary 
+                                                    hover:text-cream-foreground transition-all duration-500 target-tab">
+                        Coaching
+                    </li>
+                </ul>
+                <div class="mt-[64px] overflow-hidden relative fadeInUp">
+                    <div data-target="education" class="grid lg:gap-7.5 gap-4 grid-cols-12 grid-rows-[277px] 
+                    relative top-0 left-0 transition-all 
+                    duration-500 translate-y-0 target-card ">
+                    <!-- card 1 -->
+                        <div class="sm:col-start-1 md:col-end-5 sm:col-end-7 col-span-full sm:row-span-2 relative group/card ">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt="" class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                            h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                            group-hover/card:opacity-80 transition-all duration-500 
+                            bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href="" class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <!-- end card1 -->
+                    <!-- card 1 -->
+                    <div class="md:col-start-5 md:col-end-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                        <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                            class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                        <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                            h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                            group-hover/card:opacity-80 transition-all duration-500 
+                                            bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                            <h5 class="text-center">
+                                <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                            </h5>
+                            <p class="text-cream-foreground">Dreamland Elementary</p>
+                            <a href=""
+                                class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end card1 -->
+                    <!-- card 1 -->
+                    <div class="md:col-start-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                        <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                            class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                        <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                            <h5 class="text-center">
+                                <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                            </h5>
+                            <p class="text-cream-foreground">Dreamland Elementary</p>
+                            <a href=""
+                                class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end card1 -->
+                    <!-- card 1 -->
+                    <div class="md:col-start-5 md:col-end-9 sm:col-start-1 sm:col-end-7 col-span-full relative group/card">
+                        <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                            class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                        <div
+                            class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                    h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                    group-hover/card:opacity-80 transition-all duration-500 
+                                                                                    bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                            <h5 class="text-center">
+                                <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                            </h5>
+                            <p class="text-cream-foreground">Dreamland Elementary</p>
+                            <a href=""
+                                class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end card1 -->
+                    <!-- card 1 -->
+                    <div class="md:col-start-9 sm:col-span-6 sm:col-end-13 col-span-full relative group/card">
+                        <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                            class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                        <div
+                            class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                        h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                        group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                        bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                            <h5 class="text-center">
+                                <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                            </h5>
+                            <p class="text-cream-foreground">Dreamland Elementary</p>
+                            <a href=""
+                                class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end card1 -->
+                    </div>
+                    <div data-target="school" class="grid lg:gap-7.5 gap-4 grid-cols-12 grid-rows-[277px] 
+                                        relative top-0 left-0 transition-all 
+                                        duration-500 translate-y-0 target-card">
+                        <!-- card 1 -->
+                        <div class="sm:col-start-1 md:col-end-5 sm:col-end-7 col-span-full sm:row-span-2 relative group/card ">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-2.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                    h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                    group-hover/card:opacity-80 transition-all duration-500 
+                                                                                    bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-9 sm:col-start-1 sm:col-end-7 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                        h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                        group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                        bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-9 sm:col-span-6 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                                            h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                                            group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                                            bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                    </div>
+                    <div data-target="learn" class="grid lg:gap-7.5 gap-4 grid-cols-12 grid-rows-[277px] 
+                                        relative top-0 left-0 transition-all 
+                                        duration-500 translate-y-0 target-card ">
+                        <!-- card 1 -->
+                        <div class="sm:col-start-1 md:col-end-5 sm:col-end-7 col-span-full sm:row-span-2 relative group/card ">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-2.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                    h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                    group-hover/card:opacity-80 transition-all duration-500 
+                                                                                    bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-9 sm:col-start-1 sm:col-end-7 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                        h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                        group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                        bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-9 sm:col-span-6 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                                            h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                                            group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                                            bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                    </div>
+                    <div data-target="Child" class="grid lg:gap-7.5 gap-4 grid-cols-12 grid-rows-[277px] 
+                                        relative top-0 left-0 transition-all 
+                                        duration-500 translate-y-0 target-card ">
+                        <!-- card 1 -->
+                        <div class="sm:col-start-1 md:col-end-5 sm:col-end-7 col-span-full sm:row-span-2 relative group/card ">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                    h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                    group-hover/card:opacity-80 transition-all duration-500 
+                                                                                    bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-9 sm:col-start-1 sm:col-end-7 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                        h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                        group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                        bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-9 sm:col-span-6 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-2.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                                            h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                                            group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                                            bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                    </div>
+                    <div data-target="Coaching" class="grid lg:gap-7.5 gap-4 grid-cols-12 grid-rows-[277px] 
+                                        relative top-0 left-0 transition-all 
+                                        duration-500 translate-y-0 target-card ">
+                        <!-- card 1 -->
+                        <div class="sm:col-start-1 md:col-end-5 sm:col-end-7 col-span-full sm:row-span-2 relative group/card ">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-2.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                group-hover/card:opacity-80 transition-all duration-500 
+                                                                bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-10 sm:col-start-7 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                    h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                    group-hover/card:opacity-80 transition-all duration-500 
+                                                                                    bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-5 md:col-end-9 sm:col-start-1 sm:col-end-7 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-2.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                        h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                        group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                        bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                        <!-- card 1 -->
+                        <div class="md:col-start-9 sm:col-span-6 sm:col-end-13 col-span-full relative group/card">
+                            <img src="https://ascent-tailwind.vercel.app/assets/images/portfolio/portfolio-1.png" alt=""
+                                class="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]">
+                            <div
+                                class="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 
+                                                                                                                            h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible 
+                                                                                                                            group-hover/card:opacity-80 transition-all duration-500 
+                                                                                                                            bg-primary rounded-[10px] flex flex-col items-center justify-center">
+                                <h5 class="text-center">
+                                    <a href="" class="text-cream-foreground text-2xl font-medium">Exploring Minds Elementary Best School</a>
+                                </h5>
+                                <p class="text-cream-foreground">Dreamland Elementary</p>
+                                <a href=""
+                                    class="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group ">
+                                    <i class="fa-solid fa-arrow-right text-destructive-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end card1 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <!-- END -->
+    <!-- SERVICE START -->
+    <section class="pt-15 pb-15 relative bg-warm lg:bg-transparent services">
+        <div class="container">
+            <div class="relative after:absolute after:right-0 after:top-0 after:lg:bg-warm 
+            after:bg-transparent after:w-[calc(100%-279px)] after:h-[calc(100%-120px)] after:rounded-[10px] after:z-[-1]">
+                <div class="flex lg:flex-row flex-col justify-between lg:items-center">
+                    <div class="flex-shrink-0 flex-grow-0 basis-auto lg:w-[30%]">
+                        <p class="text-green-foreground font-bubblegum-sans text-[19px] fadeInUp">Latest Service</p>
+                        <h2 class="font-bold lg:text-[32px] md:text-[28px] text-2xl lg:leading-[130%] md:leading-[120%] leading-[110%] fadeInUp">Building a Str Foundation for Success</h2>
+                    </div>
+                    <div class="flex-shrink-0  flex-grow-0 basis-auto lg:w-[50%]">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit platea pharetra, nostra mattis hendrerit proin mollis pretium
+                        facilisi in, ligula volutpat</p>
+                    </div>
+                </div>
+                <div class="lg:flex justify-between">
+                    <div class="flex-shrink-0 flex-grow-0 basis-auto lg:w-[25%]">
+                        <div class="relative lg:mt-7.5 mt-5">
+                            <div class="service-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <div class="service-pagination mt-4 flex justify-center gap-2">
+                                    <span class="custom-dot w-3 h-3 rounded-full bg-gray-300 cursor-pointer" data-slide="0"></span>
+                                    <span class="custom-dot w-3 h-3 rounded-full bg-gray-300 cursor-pointer" data-slide="1"></span>
+                                    <span class="custom-dot w-3 h-3 rounded-full bg-gray-300 cursor-pointer" data-slide="2"></span>
+                                    <span class="custom-dot w-3 h-3 rounded-full bg-gray-300 cursor-pointer" data-slide="3"></span>
+                                </div>                                                                
+                            </div>
+                            <div class="lg:mt-10 mt-5">
+                                <a href="" class="px-7.5 py-5 border border-secondary rounded-md max-h-15 min-w-40 whitespace-nowrap btn group">Read
+                                    More
+                                    <i
+                                        class="fa-solid fa-arrow-right text-secondary-foreground transition-all duration-500 group-hover:text-cream-foreground"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===================================== -->
+                    <div class="flex-shrink-0 flex-grow-0 basis-auto lg:w-[70%] mt-6 lg:mt-0 ">
+                        <div class="center ">
+                            <div class="service-card bg-white p-6 rounded-lg shadow-md w-80  m-2.5">
+                                <div class="flex justify-start">
+                                    <img width="64" height="64" src="https://img.icons8.com/wired/64/teddy-bear.png" alt="teddy-bear" />
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-900 text-start mt-4">Learning in the School</h2>
+                                <p class="text-gray-500 text-start mt-2">Lorem ipsum dolor sit amet a the conse adipiscing</p>
+                                <div class="card-footer flex justify-start mt-4 opacity-0 invisible">
+                                    <a href="#" class="text-green-500 hover:text-green-700 font-medium flex items-center">Read More <span
+                                            class="ml-1">→</span></a>
+                                </div>
+                                <div class="">
+                                    <a href="#"
+                                        class="px-7.5 py-5 border border-gray-300 rounded-md max-h-15 min-w-40 whitespace-nowrap btn group text-gray-700 hover:text-gray-900">
+                                        Read More
+                                    </a>
+                                    <i
+                                        class="fa-solid fa-arrow-right text-gray-500 transition-all duration-500 group-hover:text-gray-700 ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="service-card bg-white p-6 rounded-lg shadow-md w-80 m-2.5">
+                                <div class="flex justify-start">
+                                    <img width="64" height="64" src="https://img.icons8.com/wired/64/teddy-bear.png" alt="teddy-bear" />
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-900 text-start mt-4">Learning in the School</h2>
+                                <p class="text-gray-500 text-start mt-2">Lorem ipsum dolor sit amet a the conse adipiscing</p>
+                                <div class="card-footer flex justify-start mt-4 opacity-0 invisible">
+                                    <a href="#" class="text-green-500 hover:text-green-700 font-medium flex items-center">Read More <span
+                                            class="ml-1">→</span></a>
+                                </div>
+                                <div class="">
+                                    <a href="#"
+                                        class="px-7.5 py-5 border border-gray-300 rounded-md max-h-15 min-w-40 whitespace-nowrap btn group text-gray-700 hover:text-gray-900">
+                                        Read More
+                                    </a>
+                                    <i
+                                        class="fa-solid fa-arrow-right text-gray-500 transition-all duration-500 group-hover:text-gray-700 ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="service-card bg-white p-6 rounded-lg shadow-md w-80 m-2.5">
+                                <div class="flex justify-start">
+                                    <img width="64" height="64" src="https://img.icons8.com/wired/64/teddy-bear.png" alt="teddy-bear" />
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-900 text-start mt-4">Learning in the School</h2>
+                                <p class="text-gray-500 text-start mt-2">Lorem ipsum dolor sit amet a the conse adipiscing</p>
+                                <div class="card-footer flex justify-start mt-4 opacity-0 invisible">
+                                    <a href="#" class="text-green-500 hover:text-green-700 font-medium flex items-center">Read More <span
+                                            class="ml-1">→</span></a>
+                                </div>
+                                <div class="">
+                                    <a href="#"
+                                        class="px-7.5 py-5 border border-gray-300 rounded-md max-h-15 min-w-40 whitespace-nowrap btn group text-gray-700 hover:text-gray-900">
+                                        Read More
+                                    </a>
+                                    <i
+                                        class="fa-solid fa-arrow-right text-gray-500 transition-all duration-500 group-hover:text-gray-700 ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="service-card bg-white p-6 rounded-lg shadow-md w-80 m-2.5">
+                                <div class="flex justify-start">
+                                    <img width="64" height="64" src="https://img.icons8.com/wired/64/teddy-bear.png" alt="teddy-bear" />
+                                </div>
+                                <h2 class="text-xl font-semibold text-gray-900 text-start mt-4">Learning in the School</h2>
+                                <p class="text-gray-500 text-start mt-2">Lorem ipsum dolor sit amet a the conse adipiscing</p>
+                                <div class="card-footer flex justify-start mt-4 opacity-0 invisible">
+                                    <a href="#" class="text-green-500 hover:text-green-700 font-medium flex items-center">Read More <span
+                                            class="ml-1">→</span></a>
+                                </div>
+                                <div class="">
+                                    <a href="#"
+                                        class="px-7.5 py-5 border border-gray-300 rounded-md max-h-15 min-w-40 whitespace-nowrap btn group text-gray-700 hover:text-gray-900">
+                                        Read More
+                                    </a>
+                                    <i
+                                        class="fa-solid fa-arrow-right text-gray-500 transition-all duration-500 group-hover:text-gray-700 ml-2"></i>
+                                </div>
+                            </div>
+                        </div>         
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute lg:left-24 left-4 lg:bottom-20 bottom-3 animate-left-right sm:block hidden">
+            <img src="https://ascent-tailwind.vercel.app/assets/images/shapes/man.png" alt="">
+        </div>
+    </section>
+
     
-
-
-
+    <!-- END -->
 
 
 
@@ -499,6 +1720,115 @@
             <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         </div>
     </footer>
+
+
+    <!-- script -->
+    <script>
+        // Lấy phần tử menu và phần tử đóng (X)
+        const navMenu = document.getElementById('mobile-menu'); // Menu
+        const offcanvaClose = document.querySelector('.offcanvaClose'); // Nút X
+
+        // Thêm sự kiện click vào nút đóng (X) để ẩn menu
+        offcanvaClose.addEventListener('click', function () {
+            navMenu.classList.add('hidden'); // Thêm lớp 'hidden' vào menu để ẩn nó
+        });
+    </script>
+    
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+                var mobileMenu = document.getElementById("mobile-menu");
+                mobileMenu.classList.toggle("hidden");
+            });
+    </script>
+
+
+<!-- Thêm Slick JS -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.center').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            arrows: false,       
+            dots: false, 
+            autoplay: true, 
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+    // Khi click dot => chuyển slide
+        $('.custom-dot').on('click', function () {
+            const index = $(this).data('slide');
+            $('.center').slick('slickGoTo', index);
+        });
+
+        // Khi slick chuyển slide => cập nhật dot
+        $('.center').on('afterChange', function (event, slick, currentSlide) {
+            $('.custom-dot').removeClass('active');
+            $('.custom-dot[data-slide="' + currentSlide + '"]').addClass('active');
+        });
+
+</script>
+
+
+
+<script>
+    const tabs = document.querySelectorAll('.target-tab');
+    const cards = document.querySelectorAll('.target-card');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Bỏ active tab hiện tại
+            tabs.forEach(t => t.classList.remove('active-tab'));
+            tab.classList.add('active-tab');
+
+            const target = tab.getAttribute('data-target');
+
+            cards.forEach(card => {
+                if (card.getAttribute('data-target') === target) {
+                    card.style.display = 'grid';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Hiển thị mặc định tab đầu tiên
+    document.addEventListener("DOMContentLoaded", () => {
+        const firstTab = document.querySelector('.target-tab');
+        const firstTarget = firstTab?.getAttribute('data-target');
+        cards.forEach(card => {
+            if (card.getAttribute('data-target') === firstTarget) {
+                card.style.display = 'grid';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+</script>
+  
 </body>
 </html>
 
